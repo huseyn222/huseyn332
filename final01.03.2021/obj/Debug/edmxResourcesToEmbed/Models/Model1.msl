@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="brendlers">
+      <EntityTypeMapping TypeName="Model.brendler">
+        <MappingFragment StoreEntitySet="brendler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="photourl" ColumnName="photourl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ortas">
+      <EntityTypeMapping TypeName="Model.orta">
+        <MappingFragment StoreEntitySet="orta">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="photourl" ColumnName="photourl" />
+          <ScalarProperty Name="sozler" ColumnName="sozler" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="satis">
+      <EntityTypeMapping TypeName="Model.sati">
+        <MappingFragment StoreEntitySet="satis">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="photourl" ColumnName="photourl" />
+          <ScalarProperty Name="soz1" ColumnName="soz1" />
+          <ScalarProperty Name="qiymet" ColumnName="qiymet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="slide1">
+      <EntityTypeMapping TypeName="Model.slide1">
+        <MappingFragment StoreEntitySet="slide1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="photourl" ColumnName="photourl" />
+          <ScalarProperty Name="soz1" ColumnName="soz1" />
+          <ScalarProperty Name="soz2" ColumnName="soz2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="adminlogins">
+      <EntityTypeMapping TypeName="Model.adminlogin">
+        <MappingFragment StoreEntitySet="adminlogin">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="oks">
+      <EntityTypeMapping TypeName="Model.ok">
+        <MappingFragment StoreEntitySet="ok">
+          <ScalarProperty Name="melumat" ColumnName="melumat" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

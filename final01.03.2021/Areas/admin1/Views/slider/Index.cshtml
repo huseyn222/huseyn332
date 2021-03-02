@@ -1,0 +1,54 @@
+﻿@model final01._03._2021.Models.slide1
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin1/Views/Shared/adminPage1.cshtml";
+}
+
+<h2>SLIDE HISSE</h2>
+@if (Model != null)
+{
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                foto
+            </th>
+            <th>
+                basliq
+            </th>
+
+            <th>
+                basliq2
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td class="py-1">
+                <img src="@Model.photourl" alt="image">
+            </td>
+            <td>
+                @Model.soz1
+            </td>
+
+            <td>
+                @Model.soz2
+            </td>
+            <td>
+                <a href="@Url.Action("Edit","slider", new { id=Model.ID })">edit</a>
+
+
+            </td>
+        </tr>
+
+
+
+    </tbody>
+</table>
+}
+else
+{
+    <p class="alert  alert-warning">not found</p>
+}

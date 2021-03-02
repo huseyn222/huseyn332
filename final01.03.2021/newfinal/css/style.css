@@ -1,0 +1,252 @@
+#a1 {
+  background: #1aada3;
+  height: 50px;
+}
+
+#b1 .b3 img {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+          
+}
+
+#b1 .b2 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  top: 30px;
+}
+
+#b1 .b5 p {
+  padding: 2vh;
+}
+
+#k9 {
+  position: fixed;
+  top: 20%;
+}
+
+#k9.active {
+  display: none;
+}
+
+#k9 .k6 {
+  border: 1px solid black;
+  color: #cea6f3;
+  text-align: center;
+  position: relative;
+  height: 36%;
+  bottom: -30px;
+}
+
+#c1 {
+    background: url(../foto/Aug_Art-Flashsale-PC._CB441247013_.gif);
+    height: 600px;
+    background-size: cover !important;
+    margin-top: 8vh;
+    background-repeat: no-repeat !important;
+}
+
+#c1 .c2 {
+  color: white;
+  position: absolute;
+  top: 40vh;
+  left: 10vh;
+}
+
+#c1 .c2 h1 {
+  font-size: 80px;
+}
+
+#d1 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 4%;
+}
+
+#d1 h6 {
+  position: relative;
+  left: 31%;
+  width: 40%;
+  text-align: center;
+}
+
+#e1 .e3 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1px;
+}
+
+#e1 .e3 img {
+  height: 50%;
+  width: 70%;
+}
+
+#e1 .e2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#e1 .e2 img {
+  padding: 5px;
+}
+
+#q1 {
+  position: relative;
+  top: 7vh;
+}
+
+#q1 .q2 {
+  text-align: center;
+}
+
+#q1 .q2 img {
+  padding: 1vh;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#w1 {
+    background-image: url(../foto/e3ee04233bd229cfefe32c8b10b6572d.gif);
+    height: 35vh;
+    position: relative;
+    top: 11vh;
+    background-size: cover;
+    background-position: 50px;
+}
+
+#w1 .w2 {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+
+#r1 .r2 {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 20vh;
+
+}
+
+#r1 .r4 {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 22vh;
+}
+
+#t1 {
+    background-image: url(../foto/141765995_1100638117043986_5408927577504960781_n.jpg);
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    top: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#t1 .t2 {
+  background: white;
+  position: relative;
+  top: 18vh;
+  text-align: center;
+  height: 25vh;
+}
+
+#y1 {
+  position: relative;
+  top: 35vh;
+  text-align: center;
+}
+
+#y1 .y2 {
+  text-align: center;
+}
+
+#y1 .y2 p {
+  text-align: center;
+}
+
+#u1 {
+  background: #f4f4f4;
+  height: 10%;
+  position: relative;
+  top: 40vh;
+}
+
+#u1 .u2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#z1 .z2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#z1 .z2 img {
+  width: 200px;
+}
+
+#z1 .z3 {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#x1 {
+  position: relative;
+  top: 20vh;
+}
+
+#x1 .x2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#r1 .r2 img {
+  padding: 1vh;
+}
+
+@media screen and (max-width: 576px) {
+  #b1 .b4 {
+    position: relative;
+  }
+  #a1 .a3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #a1 .a3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  #b1 .b4 {
+    margin-top: -2%;
+  }
+  #a1 .a3 {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

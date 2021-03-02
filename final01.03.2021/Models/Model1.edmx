@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="adminlogin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="brendler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="photourl" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ok">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="melumat" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="sozler" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="satis">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="soz1" Type="nvarchar" MaxLength="500" />
+          <Property Name="qiymet" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="slide1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="soz1" Type="nvarchar" MaxLength="500" />
+          <Property Name="soz2" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="adminlogin" EntityType="Self.adminlogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="brendler" EntityType="Self.brendler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ok" EntityType="Self.ok" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="orta" EntityType="Self.orta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="satis" EntityType="Self.satis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="slide1" EntityType="Self.slide1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="brendler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="photourl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orta">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="photourl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sozler" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sati">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="photourl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="soz1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="qiymet" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="slide1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="photourl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="soz1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="soz2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="brendlers" EntityType="Self.brendler" />
+          <EntitySet Name="ortas" EntityType="Self.orta" />
+          <EntitySet Name="satis" EntityType="Self.sati" />
+          <EntitySet Name="slide1" EntityType="Self.slide1" />
+          <EntitySet Name="adminlogins" EntityType="Model.adminlogin" />
+          <EntitySet Name="oks" EntityType="Model.ok" />
+        </EntityContainer>
+        <EntityType Name="adminlogin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ok">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="melumat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="brendlers">
+            <EntityTypeMapping TypeName="Model.brendler">
+              <MappingFragment StoreEntitySet="brendler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="photourl" ColumnName="photourl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ortas">
+            <EntityTypeMapping TypeName="Model.orta">
+              <MappingFragment StoreEntitySet="orta">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="photourl" ColumnName="photourl" />
+                <ScalarProperty Name="sozler" ColumnName="sozler" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="satis">
+            <EntityTypeMapping TypeName="Model.sati">
+              <MappingFragment StoreEntitySet="satis">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="photourl" ColumnName="photourl" />
+                <ScalarProperty Name="soz1" ColumnName="soz1" />
+                <ScalarProperty Name="qiymet" ColumnName="qiymet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="slide1">
+            <EntityTypeMapping TypeName="Model.slide1">
+              <MappingFragment StoreEntitySet="slide1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="photourl" ColumnName="photourl" />
+                <ScalarProperty Name="soz1" ColumnName="soz1" />
+                <ScalarProperty Name="soz2" ColumnName="soz2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="adminlogins">
+            <EntityTypeMapping TypeName="Model.adminlogin">
+              <MappingFragment StoreEntitySet="adminlogin">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="oks">
+            <EntityTypeMapping TypeName="Model.ok">
+              <MappingFragment StoreEntitySet="ok">
+                <ScalarProperty Name="melumat" ColumnName="melumat" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

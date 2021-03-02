@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="adminlogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="brendler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photourl" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ok">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="melumat" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="orta">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="sozler" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="satis">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="soz1" Type="nvarchar" MaxLength="500" />
+    <Property Name="qiymet" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="slide1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="soz1" Type="nvarchar" MaxLength="500" />
+    <Property Name="soz2" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="adminlogin" EntityType="Self.adminlogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="brendler" EntityType="Self.brendler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ok" EntityType="Self.ok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orta" EntityType="Self.orta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="satis" EntityType="Self.satis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="slide1" EntityType="Self.slide1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
