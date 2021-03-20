@@ -130,12 +130,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin1\admin1AreaRegistration.cs" />
     <Compile Include="Areas\admin1\Controllers\adminController.cs" />
+    <Compile Include="Areas\admin1\Controllers\haqqindaController.cs" />
     <Compile Include="Areas\admin1\Controllers\homeController.cs" />
     <Compile Include="Areas\admin1\Controllers\okController.cs" />
     <Compile Include="Areas\admin1\Controllers\satisController.cs" />
     <Compile Include="Areas\admin1\Controllers\sliderController.cs" />
+    <Compile Include="Controllers\blogController.cs" />
     <Compile Include="Controllers\cartController.cs" />
+    <Compile Include="Controllers\haqqindaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\shopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -143,6 +147,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\brendler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\haqqinda.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Model1.Context.cs">
@@ -160,13 +167,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\ok.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\orta.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sati.cs">
+    <Compile Include="Models\sati1.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\slide1.cs">
@@ -1081,6 +1085,8 @@
     <Content Include="newfinal\foto\600x314-insan-kaynagina-yatirim-1582664596880.jpeg" />
     <Content Include="newfinal\foto\accessories-5_f85ee6be-135b-445f-b539-c7f4482e7c7f_900x.jpg" />
     <Content Include="newfinal\foto\Aug_Art-Flashsale-PC._CB441247013_.gif" />
+    <Content Include="newfinal\foto\blog-man-fashion1-600x670.jpg" />
+    <Content Include="newfinal\foto\blog-new-17-1024x629_1024x.progressive.jpg" />
     <Content Include="newfinal\foto\cat-bag-5_377x.jpg" />
     <Content Include="newfinal\foto\e3ee04233bd229cfefe32c8b10b6572d.gif" />
     <Content Include="newfinal\foto\highcompress-slider_1.jpg" />
@@ -1092,6 +1098,7 @@
     <Content Include="newfinal\foto\logo-3_250x.png" />
     <Content Include="newfinal\foto\logo-6_250x.png" />
     <Content Include="newfinal\foto\logo-basel.svg" />
+    <Content Include="newfinal\foto\payments_255x.png" />
     <Content Include="newfinal\foto\ruyada-insan-gormek-001.jpg" />
     <Content Include="newfinal\foto\shoe_870x.progressive.jpg" />
     <Content Include="newfinal\foto\testimonial2-1-100x100_100x100.progressive.jpg" />
@@ -1158,6 +1165,8 @@
     <Content Include="Areas\admin1\Views\satis\Details.cshtml" />
     <Content Include="Areas\admin1\Views\satis\Edit.cshtml" />
     <Content Include="Areas\admin1\Views\admin\Login.cshtml" />
+    <Content Include="Areas\admin1\Views\haqqinda\Index.cshtml" />
+    <Content Include="Areas\admin1\Views\haqqinda\edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1183,13 +1192,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\haqqinda\haqqinda.cshtml" />
+    <Content Include="Views\cart\cart.cshtml" />
+    <Content Include="Views\shop\shop.cshtml" />
+    <Content Include="Views\blog\blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin1\Data\" />
     <Folder Include="Areas\admin1\Views\ok\" />
     <Folder Include="uploads\" />
-    <Folder Include="Views\cart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -12,9 +12,10 @@ namespace final01._03._2021.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ok
+    public partial class haqqinda
     {
         public int ID { get; set; }
-        public string melumat { get; set; }
+        public string fotourl { get; set; }
+        public string sozz { get; set; }
     }
 }

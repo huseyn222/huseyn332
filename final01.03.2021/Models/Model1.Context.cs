@@ -27,9 +27,9 @@ namespace final01._03._2021.Models
     
         public virtual DbSet<brendler> brendlers { get; set; }
         public virtual DbSet<orta> ortas { get; set; }
-        public virtual DbSet<sati> satis { get; set; }
         public virtual DbSet<slide1> slide1 { get; set; }
         public virtual DbSet<adminlogin> adminlogins { get; set; }
-        public virtual DbSet<ok> oks { get; set; }
+        public virtual DbSet<haqqinda> haqqindas { get; set; }
+        public virtual DbSet<sati1> sati1 { get; set; }
     }
 }

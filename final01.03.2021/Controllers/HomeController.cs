@@ -16,13 +16,13 @@ namespace final01._03._2021.Controllers
         public ActionResult Index()
         {
             ViewBag.header2 = db.slide1.First();
-            ViewBag.satis2 = db.satis.ToList();
+            ViewBag.satis2 = db.sati1.ToList();
 
             return View();
         }
         public ActionResult huseyn1()
         {
-            return View(db.satis.ToList());
+            return View(db.sati1.ToList());
         }
         public ActionResult About()
         {
@@ -37,14 +37,6 @@ namespace final01._03._2021.Controllers
 
             return View();
         }
-        [HttpPost]
-        public ActionResult adres(ok melumat)
-        {
 
-            db.oks.Add(melumat);
-            db.SaveChanges();
-
-            return View();
-        }
     }
 }

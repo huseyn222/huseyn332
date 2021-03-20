@@ -12,11 +12,12 @@ namespace final01._03._2021.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class sati
+    public partial class sati1
     {
         public int ID { get; set; }
         public string photourl { get; set; }
         public string soz1 { get; set; }
         public int qiymet { get; set; }
+        public string haqqinda8 { get; set; }
     }
 }

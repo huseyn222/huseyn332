@@ -18,16 +18,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="satis">
-      <EntityTypeMapping TypeName="Model.sati">
-        <MappingFragment StoreEntitySet="satis">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="photourl" ColumnName="photourl" />
-          <ScalarProperty Name="soz1" ColumnName="soz1" />
-          <ScalarProperty Name="qiymet" ColumnName="qiymet" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="slide1">
       <EntityTypeMapping TypeName="Model.slide1">
         <MappingFragment StoreEntitySet="slide1">
@@ -47,10 +37,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="oks">
-      <EntityTypeMapping TypeName="Model.ok">
-        <MappingFragment StoreEntitySet="ok">
-          <ScalarProperty Name="melumat" ColumnName="melumat" />
+    <EntitySetMapping Name="haqqindas">
+      <EntityTypeMapping TypeName="Model.haqqinda">
+        <MappingFragment StoreEntitySet="haqqinda">
+          <ScalarProperty Name="sozz" ColumnName="sozz" />
+          <ScalarProperty Name="fotourl" ColumnName="fotourl" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sati1">
+      <EntityTypeMapping TypeName="Model.sati1">
+        <MappingFragment StoreEntitySet="sati1">
+          <ScalarProperty Name="haqqinda8" ColumnName="haqqinda8" />
+          <ScalarProperty Name="qiymet" ColumnName="qiymet" />
+          <ScalarProperty Name="soz1" ColumnName="soz1" />
+          <ScalarProperty Name="photourl" ColumnName="photourl" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

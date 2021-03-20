@@ -19,7 +19,7 @@ namespace final01._03._2021.Areas.admin1.Controllers
         // GET: admin1/satis
         public ActionResult Index()
         {
-            return View(db.satis.ToList());
+            return View(db.sati1.ToList());
         }
 
         // GET: admin1/satis/Details/5
@@ -29,7 +29,7 @@ namespace final01._03._2021.Areas.admin1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            sati sati = db.satis.Find(id);
+            sati1 sati = db.sati1.Find(id);
             if (sati == null)
             {
                 return HttpNotFound();
@@ -40,7 +40,7 @@ namespace final01._03._2021.Areas.admin1.Controllers
         // GET: admin1/satis/Create
         public ActionResult Create()
         {
-                        if (db.satis.Count() >= 1000)
+                        if (db.sati1.Count() >= 1000)
             {
                 return RedirectToAction("Index");
             }
@@ -51,7 +51,7 @@ namespace final01._03._2021.Areas.admin1.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public ActionResult Create(sati sati, HttpPostedFileBase foto)
+        public ActionResult Create(sati1 sati, HttpPostedFileBase foto)
         {
 
             if (ModelState.IsValid)
@@ -62,7 +62,7 @@ namespace final01._03._2021.Areas.admin1.Controllers
                 string imgname = Guid.NewGuid() + file.Extension;
                 img.Save("~/uploads/" + imgname);
                 sati.photourl = "/uploads/" + imgname;
-                db.satis.Add(sati);
+                db.sati1.Add(sati);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -77,7 +77,7 @@ namespace final01._03._2021.Areas.admin1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            sati sati = db.satis.Find(id);
+            sati1 sati = db.sati1.Find(id);
             if (sati == null)
             {
                 return HttpNotFound();
@@ -87,7 +87,7 @@ namespace final01._03._2021.Areas.admin1.Controllers
         [HttpPost]
         public ActionResult Edit(int? id, string header, int qiymet, HttpPostedFileBase foto)
         {
-            sati sa1 = db.satis.FirstOrDefault(x=>x.ID==id);
+            sati1 sa1 = db.sati1.FirstOrDefault(x=>x.ID==id);
 
             if (foto != null)
             {
@@ -130,7 +130,7 @@ namespace final01._03._2021.Areas.admin1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            sati sati = db.satis.Find(id);
+            sati1 sati = db.sati1.Find(id);
             if (sati == null)
             {
                 return HttpNotFound();
@@ -143,8 +143,8 @@ namespace final01._03._2021.Areas.admin1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            sati sati = db.satis.Find(id);
-            db.satis.Remove(sati);
+            sati1 sati = db.sati1.Find(id);
+            db.sati1.Remove(sati);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

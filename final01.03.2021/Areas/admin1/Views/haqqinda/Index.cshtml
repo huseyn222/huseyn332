@@ -1,0 +1,50 @@
+﻿@model final01._03._2021.Models.haqqinda
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin1/Views/Shared/adminPage1.cshtml";
+}
+
+<h2>Indexesde</h2>
+@if (Model != null)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    foto
+                </th>
+                <th>
+                    basliq
+                </th>
+
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>
+                    <img src="@Model.fotourl" alt="image">
+                </td>
+
+                <td>
+                    @Model.sozz
+                </td>
+                <td>
+                    <a href="@Url.Action("edit","haqqinda",new {id=Model.ID })">EDIT</a>
+
+
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+}
+else
+{
+    <p class="alert alert-warning">no item</p>
+}

@@ -15,15 +15,6 @@
     <Property Name="photourl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="sozler" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
-  <EntityType Name="sati">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="photourl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="soz1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="qiymet" Type="Int32" Nullable="false" />
-  </EntityType>
   <EntityType Name="slide1">
     <Key>
       <PropertyRef Name="ID" />
@@ -36,10 +27,10 @@
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="brendlers" EntityType="Self.brendler" />
     <EntitySet Name="ortas" EntityType="Self.orta" />
-    <EntitySet Name="satis" EntityType="Self.sati" />
     <EntitySet Name="slide1" EntityType="Self.slide1" />
     <EntitySet Name="adminlogins" EntityType="Model.adminlogin" />
-    <EntitySet Name="oks" EntityType="Model.ok" />
+    <EntitySet Name="haqqindas" EntityType="Model.haqqinda" />
+    <EntitySet Name="sati1" EntityType="Model.sati1" />
   </EntityContainer>
   <EntityType Name="adminlogin">
     <Key>
@@ -49,11 +40,22 @@
     <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="password" Type="Int32" Nullable="false" />
   </EntityType>
-  <EntityType Name="ok">
+  <EntityType Name="haqqinda">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="melumat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fotourl" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="sozz" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sati1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="photourl" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="soz1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="qiymet" Type="Int32" Nullable="false" />
+    <Property Name="haqqinda8" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

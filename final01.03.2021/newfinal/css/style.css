@@ -3,24 +3,22 @@
   height: 50px;
 }
 
-#b1 .b3 img {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-          
-}
-
 #b1 .b2 {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-  top: 30px;
+    justify-content: space-between;
+    position: relative;
+    top: 5vh;
+}
+.b5 {
+    position: relative;
+    top: 2vh;
 }
 
-#b1 .b5 p {
-  padding: 2vh;
-}
+
+
+
+
+
+
 
 #k9 {
   position: fixed;
@@ -41,11 +39,12 @@
 }
 
 #c1 {
-    background: url(../foto/Aug_Art-Flashsale-PC._CB441247013_.gif);
-    height: 600px;
+    background-image: url(../foto/highcompress-slider_2_1080x.jpg);
+    height: 59vh;
     background-size: cover !important;
     margin-top: 8vh;
-    background-repeat: no-repeat !important;
+    background-repeat: no-repeat;
+    background-position: center !important;
 }
 
 #c1 .c2 {
@@ -110,6 +109,7 @@
   padding: 1vh;
   max-width: 300px;
   max-height: 300px;
+  text-align: center;
 }
 
 #w1 {
@@ -206,7 +206,6 @@
 #z1 .z3 {
   text-align: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
 }
 
@@ -226,27 +225,243 @@
   padding: 1vh;
 }
 
-@media screen and (max-width: 576px) {
-  #b1 .b4 {
+
+
+
+.aaz2 {
+    text-align: center;
     position: relative;
-  }
-  #a1 .a3 {
-    display: none;
-  }
+    top: 39vh;
 }
 
-@media screen and (max-width: 768px) {
-  #a1 .a3 {
-    display: none;
-  }
+
+
+
+
+
+
+
+#xm {
+    position: relative;
+    top: 30vh;
 }
 
-@media screen and (max-width: 998px) {
-  #b1 .b4 {
-    margin-top: -2%;
-  }
-  #a1 .a3 {
-    display: none;
-  }
+
+
+
+
+
+
+
+#c00 .c02 {
+    position: relative;
+    top: 15vh;
+    text-align: center;
+   
+    
 }
-/*# sourceMappingURL=style.css.map */
+
+.c02 img {
+    text-align: center;
+    padding: 5vh;
+    height: 300px;
+}
+
+
+
+
+
+#co {
+    position: relative;
+    top: 50vh;
+    text-align: center;
+}
+
+
+
+
+
+
+#ss {
+    background: black;
+    height: 50vh;
+    position: relative;
+    top: 70vh;
+}
+.s1 img {
+    text-align: center;
+    background: white;
+    margin-top: 35px;
+}
+
+.s2 {
+    position: relative;
+    top: 5vh;
+}
+
+.s0 {
+    justify-content: space-between;
+    color: white;
+}
+
+.s9 {
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+
+
+
+
+
+
+
+#sss {
+    background: black;
+    height: 50vh;
+    position: relative;
+    top: 30vh;
+}
+.s1 {
+    text-align: center;
+}
+
+.s2 {
+    position: relative;
+    top: 5vh;
+}
+
+
+
+.s0 {
+    justify-content: space-between;
+    color: white;
+}
+
+.s9 {
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+
+
+
+
+
+
+
+#ll {
+    text-align: center;
+    position: relative;
+    top: 20vh;
+}
+
+.l0 img {
+    height: 500px;
+}
+
+.l9 img{
+    height: 500px;
+}
+
+
+#qc {
+    text-align: center;
+    position: relative;
+    top: 30vh;
+}
+
+
+
+.q2 img {
+    justify-content: center;
+    height: 300px;
+    padding: 2vh;
+    max-width: 100%;
+}
+
+
+
+
+
+#ss0 {
+    background: black;
+    height: 45vh;
+    position: relative;
+    top: 40vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    #ss0 {
+        height: 70vh !important;
+    }
+  
+
+
+}
+
+
+
+    @media screen and (max-width: 576px) {
+        #ss {
+            height: 57vh;
+        }
+        #sss {
+            height: 57vh;
+        }
+        #ss0 {
+            height: 60vh;
+        }
+        #q1 {
+            margin-left: 50px !important;
+            text-align: center;
+        }
+
+        #b1 .b4 {
+            position: relative;
+        }
+
+        #a1 .a3 {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        #ss {
+            height: 57vh;
+        }
+        #sss {
+            height: 57vh;
+        }
+        #ss0 {
+            height: 60vh;
+        }
+        #a1 .a3 {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 998px) {
+        #b1 .b4 {
+            margin-top: -2%;
+        }
+
+        #a1 .a3 {
+            display: none;
+        }
+    }
+    /*# sourceMappingURL=style.css.map */

@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace final01._03._2021.Controllers
 {
-    public class cartController : Controller
+    public class shopController : Controller
     {
-        // GET: cart
-        public ActionResult cart()
+        // GET: shop
+        public ActionResult shop()
         {
             return View();
         }

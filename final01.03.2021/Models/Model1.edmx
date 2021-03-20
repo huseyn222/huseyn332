@@ -20,12 +20,13 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="photourl" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="ok">
+        <EntityType Name="haqqinda">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="melumat" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="fotourl" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="sozz" Type="nvarchar" MaxLength="500" Nullable="false" />
         </EntityType>
         <EntityType Name="orta">
           <Key>
@@ -35,7 +36,7 @@
           <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="sozler" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="satis">
+        <EntityType Name="sati1">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -43,6 +44,7 @@
           <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="soz1" Type="nvarchar" MaxLength="500" />
           <Property Name="qiymet" Type="int" Nullable="false" />
+          <Property Name="haqqinda8" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="slide1">
           <Key>
@@ -56,9 +58,9 @@
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="adminlogin" EntityType="Self.adminlogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="brendler" EntityType="Self.brendler" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ok" EntityType="Self.ok" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="haqqinda" EntityType="Self.haqqinda" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="orta" EntityType="Self.orta" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="satis" EntityType="Self.satis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sati1" EntityType="Self.sati1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="slide1" EntityType="Self.slide1" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -80,15 +82,6 @@
           <Property Name="photourl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="sozler" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="sati">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="photourl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="soz1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="qiymet" Type="Int32" Nullable="false" />
-        </EntityType>
         <EntityType Name="slide1">
           <Key>
             <PropertyRef Name="ID" />
@@ -101,10 +94,10 @@
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="brendlers" EntityType="Self.brendler" />
           <EntitySet Name="ortas" EntityType="Self.orta" />
-          <EntitySet Name="satis" EntityType="Self.sati" />
           <EntitySet Name="slide1" EntityType="Self.slide1" />
           <EntitySet Name="adminlogins" EntityType="Model.adminlogin" />
-          <EntitySet Name="oks" EntityType="Model.ok" />
+          <EntitySet Name="haqqindas" EntityType="Model.haqqinda" />
+          <EntitySet Name="sati1" EntityType="Model.sati1" />
         </EntityContainer>
         <EntityType Name="adminlogin">
           <Key>
@@ -114,12 +107,23 @@
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="password" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="ok">
+        <EntityType Name="haqqinda">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="melumat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fotourl" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="sozz" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sati1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="photourl" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="soz1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="qiymet" Type="Int32" Nullable="false" />
+          <Property Name="haqqinda8" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -144,16 +148,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="satis">
-            <EntityTypeMapping TypeName="Model.sati">
-              <MappingFragment StoreEntitySet="satis">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="photourl" ColumnName="photourl" />
-                <ScalarProperty Name="soz1" ColumnName="soz1" />
-                <ScalarProperty Name="qiymet" ColumnName="qiymet" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="slide1">
             <EntityTypeMapping TypeName="Model.slide1">
               <MappingFragment StoreEntitySet="slide1">
@@ -173,10 +167,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="oks">
-            <EntityTypeMapping TypeName="Model.ok">
-              <MappingFragment StoreEntitySet="ok">
-                <ScalarProperty Name="melumat" ColumnName="melumat" />
+          <EntitySetMapping Name="haqqindas">
+            <EntityTypeMapping TypeName="Model.haqqinda">
+              <MappingFragment StoreEntitySet="haqqinda">
+                <ScalarProperty Name="sozz" ColumnName="sozz" />
+                <ScalarProperty Name="fotourl" ColumnName="fotourl" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sati1">
+            <EntityTypeMapping TypeName="Model.sati1">
+              <MappingFragment StoreEntitySet="sati1">
+                <ScalarProperty Name="haqqinda8" ColumnName="haqqinda8" />
+                <ScalarProperty Name="qiymet" ColumnName="qiymet" />
+                <ScalarProperty Name="soz1" ColumnName="soz1" />
+                <ScalarProperty Name="photourl" ColumnName="photourl" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -15,12 +15,13 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="photourl" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityType Name="ok">
+  <EntityType Name="haqqinda">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="melumat" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fotourl" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="sozz" Type="nvarchar" MaxLength="500" Nullable="false" />
   </EntityType>
   <EntityType Name="orta">
     <Key>
@@ -30,7 +31,7 @@
     <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
     <Property Name="sozler" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityType Name="satis">
+  <EntityType Name="sati1">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
@@ -38,6 +39,7 @@
     <Property Name="photourl" Type="nvarchar" MaxLength="500" Nullable="false" />
     <Property Name="soz1" Type="nvarchar" MaxLength="500" />
     <Property Name="qiymet" Type="int" Nullable="false" />
+    <Property Name="haqqinda8" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="slide1">
     <Key>
@@ -51,9 +53,9 @@
   <EntityContainer Name="ModelStoreContainer">
     <EntitySet Name="adminlogin" EntityType="Self.adminlogin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="brendler" EntityType="Self.brendler" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ok" EntityType="Self.ok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="haqqinda" EntityType="Self.haqqinda" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="orta" EntityType="Self.orta" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="satis" EntityType="Self.satis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sati1" EntityType="Self.sati1" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="slide1" EntityType="Self.slide1" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
