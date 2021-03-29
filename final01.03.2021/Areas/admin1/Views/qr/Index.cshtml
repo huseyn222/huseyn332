@@ -1,0 +1,60 @@
+﻿@model final01.03.2021.Models.musteri4
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin1/Views/Shared/adminPage1.cshtml";
+}
+
+@if (Model != null)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    foto
+                </th>
+                <th>
+                    basliq
+                </th>
+
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>
+                    <img src="@Model.fotourl" alt="image">
+                </td>
+
+                <td>
+                    @Model.adsoyad
+                </td>
+
+                <td>
+                    @Model.unvan
+                </td>
+
+                <td>
+                    @Model.nomre
+                </td>
+                <td>
+                    @Model.haqqinda
+                </td>
+                <td>
+                    <a href="@Url.Action("qr","qr",new {id=Model.ID })">EDIT</a>
+
+
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+}
+else
+{
+    <p class="alert alert-warning">no item</p>
+}

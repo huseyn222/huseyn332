@@ -133,6 +133,7 @@
     <Compile Include="Areas\admin1\Controllers\haqqindaController.cs" />
     <Compile Include="Areas\admin1\Controllers\homeController.cs" />
     <Compile Include="Areas\admin1\Controllers\okController.cs" />
+    <Compile Include="Areas\admin1\Controllers\qrController.cs" />
     <Compile Include="Areas\admin1\Controllers\satisController.cs" />
     <Compile Include="Areas\admin1\Controllers\sliderController.cs" />
     <Compile Include="Controllers\blogController.cs" />
@@ -166,6 +167,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\musteri4.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\orta.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -1167,6 +1171,7 @@
     <Content Include="Areas\admin1\Views\admin\Login.cshtml" />
     <Content Include="Areas\admin1\Views\haqqinda\Index.cshtml" />
     <Content Include="Areas\admin1\Views\haqqinda\edit.cshtml" />
+    <Content Include="Areas\admin1\Views\qr\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

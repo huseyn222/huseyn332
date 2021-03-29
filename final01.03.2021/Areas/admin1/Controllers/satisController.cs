@@ -10,11 +10,12 @@ using System.Web.Helpers;
 using System.Web.Mvc;
 using final01._03._2021.Models;
 
+
 namespace final01._03._2021.Areas.admin1.Controllers
 {
     public class satisController : Controller
     {
-        private Entities db = new Entities();
+         Entities db = new Entities();
 
         // GET: admin1/satis
         public ActionResult Index()

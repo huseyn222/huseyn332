@@ -28,6 +28,17 @@
           <Property Name="fotourl" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="sozz" Type="nvarchar" MaxLength="500" Nullable="false" />
         </EntityType>
+        <EntityType Name="musteri4">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fotourl" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="adsoyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="unvan" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="nomre" Type="int" Nullable="false" />
+          <Property Name="haqqinda" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="orta">
           <Key>
             <PropertyRef Name="ID" />
@@ -59,6 +70,7 @@
           <EntitySet Name="adminlogin" EntityType="Self.adminlogin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="brendler" EntityType="Self.brendler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="haqqinda" EntityType="Self.haqqinda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="musteri4" EntityType="Self.musteri4" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="orta" EntityType="Self.orta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sati1" EntityType="Self.sati1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="slide1" EntityType="Self.slide1" Schema="dbo" store:Type="Tables" />
@@ -98,6 +110,7 @@
           <EntitySet Name="adminlogins" EntityType="Model.adminlogin" />
           <EntitySet Name="haqqindas" EntityType="Model.haqqinda" />
           <EntitySet Name="sati1" EntityType="Model.sati1" />
+          <EntitySet Name="musteri4" EntityType="Model.musteri4" />
         </EntityContainer>
         <EntityType Name="adminlogin">
           <Key>
@@ -124,6 +137,17 @@
           <Property Name="soz1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="qiymet" Type="Int32" Nullable="false" />
           <Property Name="haqqinda8" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="musteri4">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fotourl" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="adsoyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="unvan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nomre" Type="Int32" Nullable="false" />
+          <Property Name="haqqinda" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -183,6 +207,18 @@
                 <ScalarProperty Name="qiymet" ColumnName="qiymet" />
                 <ScalarProperty Name="soz1" ColumnName="soz1" />
                 <ScalarProperty Name="photourl" ColumnName="photourl" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="musteri4">
+            <EntityTypeMapping TypeName="Model.musteri4">
+              <MappingFragment StoreEntitySet="musteri4">
+                <ScalarProperty Name="haqqinda" ColumnName="haqqinda" />
+                <ScalarProperty Name="nomre" ColumnName="nomre" />
+                <ScalarProperty Name="unvan" ColumnName="unvan" />
+                <ScalarProperty Name="adsoyad" ColumnName="adsoyad" />
+                <ScalarProperty Name="fotourl" ColumnName="fotourl" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

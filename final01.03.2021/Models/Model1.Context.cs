@@ -31,5 +31,6 @@ namespace final01._03._2021.Models
         public virtual DbSet<adminlogin> adminlogins { get; set; }
         public virtual DbSet<haqqinda> haqqindas { get; set; }
         public virtual DbSet<sati1> sati1 { get; set; }
+        public virtual DbSet<musteri4> musteri4 { get; set; }
     }
 }

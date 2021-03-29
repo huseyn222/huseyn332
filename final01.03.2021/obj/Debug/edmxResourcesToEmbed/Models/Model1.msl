@@ -57,5 +57,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="musteri4">
+      <EntityTypeMapping TypeName="Model.musteri4">
+        <MappingFragment StoreEntitySet="musteri4">
+          <ScalarProperty Name="haqqinda" ColumnName="haqqinda" />
+          <ScalarProperty Name="nomre" ColumnName="nomre" />
+          <ScalarProperty Name="unvan" ColumnName="unvan" />
+          <ScalarProperty Name="adsoyad" ColumnName="adsoyad" />
+          <ScalarProperty Name="fotourl" ColumnName="fotourl" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
